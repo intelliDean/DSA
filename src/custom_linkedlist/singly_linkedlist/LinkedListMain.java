@@ -11,8 +11,11 @@ public class LinkedListMain {
         list.append(78);
         list.append(54);
         list.prepend(90);
+
         System.out.println(list.getAll());
-        list.insert(100, 4);
+       // System.out.println(list.replaceWith(2, 100));
+        //System.out.println(list.getAll());
+        //list.insert(100, 4);
        // list.display();
 //        System.out.println(list.deleteFirst());
 //        list.display();

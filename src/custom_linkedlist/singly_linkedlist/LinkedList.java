@@ -52,6 +52,7 @@ public class LinkedList {
             }
         }
         Node node = new Node(number);
+        assert temp != null;
         node.setNext(temp.getNext());       //new node created is pointing at the object that used to be at this index hence taking its place and shifting it forward
         temp.setNext(node);             //the node at the index before the current index is pointing at the new node
         size++;
@@ -152,4 +153,15 @@ public class LinkedList {
     }
 
 
+    public void replaceWith(int index, int number) {
+        Node node = new Node(number);
+        Node find = head;
+
+        for (int i = 1; i < index; i++) {
+            find = find.getNext();
+        }
+
+        node.setNext(find.getNext().getNext());
+        find.setNext(node);
+    }
 }

@@ -37,6 +37,7 @@ class LinkedListTest {
         ll.append(33);
         ll.append(43);
         ll.append(10);
+
         assertArrayEquals(new Object[]{90, 43, 23, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
     }
 
@@ -116,7 +117,7 @@ class LinkedListTest {
         ll.append(43);
         ll.append(10);
 
-        ll.delete(2);
+        int val = ll.delete(2);
 
         assertArrayEquals(new Object[]{90, 43, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
     }
@@ -161,5 +162,19 @@ class LinkedListTest {
         ll.deleteLast();
 
         assertArrayEquals(new Object[]{90, 43, 23, 33, 43}, ll.getAll().toArray(new Object[0]));
+    }
+
+    @Test
+    void replaceWith() {
+        ll.prepend(23);
+        ll.prepend(43);
+        ll.prepend(90);
+        ll.append(33);
+        ll.append(43);
+        ll.append(10);
+
+        ll.replaceWith(2, 30);
+
+       assertArrayEquals(new Object[]{90, 43, 30, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
     }
 }
