@@ -1,13 +1,13 @@
 package custom_linkedlist.circular_linkedlist;
 
 public class CircularLinkedList {
-    //private int size = 0;
     private Node head;
     private Node tail;
 
-    public CircularLinkedList() {}
+    public CircularLinkedList() {
+    }
 
-    public void prepend(int number) {
+    public void add(int number) {
         Node node = new Node(number);
 
         if (head == null) {
@@ -21,12 +21,13 @@ public class CircularLinkedList {
         tail = node;
     }
 
+
     public void display() {
         Node node = head;
 
-        if (node != null){
+        if (node != null) {
             do {
-                System.out.print(node.getValue()+" -> ");
+                System.out.print(node.getValue() + " -> ");
                 node = node.getNext();
             } while (node != head);
             System.out.println("END!");
