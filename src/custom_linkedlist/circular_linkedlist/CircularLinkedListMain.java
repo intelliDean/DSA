@@ -4,12 +4,12 @@ public class CircularLinkedListMain {
     public static void main(String[] args) {
         CircularLinkedList cll = new CircularLinkedList();
 
-        cll.prepend(34);
-        cll.prepend(64);
-        cll.prepend(31);
-        cll.prepend(90);
-        cll.prepend(54);
-        cll.prepend(89);
+        cll.add(34);
+        cll.add(64);
+        cll.add(31);
+        cll.add(90);
+        cll.add(54);
+        cll.add(89);
 
         cll.display();
 

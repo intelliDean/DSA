@@ -47,7 +47,9 @@ public class LinkedList {
         }
         Node temp = head;
         for (int i = 1; i < index; i++) {       //stop at just before the index
-            temp = temp.getNext();
+            if (temp != null) {
+                temp = temp.getNext();
+            }
         }
         Node node = new Node(number);
         node.setNext(temp.getNext());       //new node created is pointing at the object that used to be at this index hence taking its place and shifting it forward
@@ -62,6 +64,7 @@ public class LinkedList {
         }
         return node.getValue();
     }
+
     public Node findByValue(int value) {
         Node find = head;
         while (find != null) {
@@ -71,7 +74,7 @@ public class LinkedList {
             find = find.getNext();
         }
         return null;
-     }
+    }
 
     public int deleteFirst() {
         int value = head.getValue();
@@ -138,6 +141,7 @@ public class LinkedList {
         }
         return temp;
     }
+
     public void display() {
         Node temp = head;
         while (temp != null) {

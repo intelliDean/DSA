@@ -11,7 +11,8 @@ public class LinkedListMain {
         list.append(78);
         list.append(54);
         list.prepend(90);
-        list.insert(100000, 4);
+        System.out.println(list.getAll());
+        list.insert(100, 4);
        // list.display();
 //        System.out.println(list.deleteFirst());
 //        list.display();
@@ -22,7 +23,7 @@ public class LinkedListMain {
 //        System.out.println(list.getAll());
 
         //System.out.println(list);
-        System.out.println(list.findByValue(89));
+        System.out.println(list.getAll());
 
     }
 }
