@@ -2,7 +2,7 @@ package maths_for_data_structure;
 
 public class PrimeCheck {
     public static void main(String[] args) {
-        int number = 40;
+        int number = 59;
         primeCheck(number);
 
     }

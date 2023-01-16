@@ -18,13 +18,11 @@ public class CircularLinkedList {
             tail = node;
             return;
         }
-
         tail.setNext(node);
         node.setNext(head);
         tail = node;
         size++;
     }
-
 
     public void display() {
         Node node = head;
@@ -143,7 +141,6 @@ public class CircularLinkedList {
         int value = node.getNext().getValue();
         node.setNext(node.getNext().getNext());
         return value;
-
     }
 
     public void replaceWith(int before, int after) {
@@ -155,10 +152,7 @@ public class CircularLinkedList {
                 break;
             }
         }
-
-
         node.setNext(find.getNext().getNext());
         find.setNext(node);
-
     }
 }

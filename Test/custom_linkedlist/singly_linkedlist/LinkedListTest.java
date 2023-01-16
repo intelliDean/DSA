@@ -18,6 +18,7 @@ class LinkedListTest {
         ll.prepend(23);
         ll.prepend(43);
         ll.prepend(90);
+
         assertArrayEquals(new Object[]{90, 43, 23}, ll.getAll().toArray(new Object[0]));
     }
 
@@ -52,6 +53,26 @@ class LinkedListTest {
 
         ll.insert(670, 2);
         assertArrayEquals(new Object[]{90, 43, 670, 23, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
+    }
+
+    @Test
+    void insertInAnEmptyList() {
+        ll.insert(670, 0);
+        assertArrayEquals(new Object[]{670}, ll.getAll().toArray(new Object[0]));
+    }
+    @Test
+    void insertUsingRecursion() {
+        ll.prepend(23);
+        ll.prepend(43);
+        ll.prepend(90);
+        ll.append(33);
+        ll.append(43);
+        ll.append(10);
+
+        ll.insertRec(490, 4);
+
+        assertArrayEquals(new Object[]{90, 43, 23, 33, 490, 43, 10}, ll.getAll().toArray(new Object[0]));
+
     }
 
     @Test
@@ -176,5 +197,20 @@ class LinkedListTest {
         ll.replaceWith(2, 30);
 
        assertArrayEquals(new Object[]{90, 43, 30, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
+    }
+    @Test
+    void getIndex() {
+        ll.prepend(23);
+        ll.prepend(43);
+        ll.prepend(90);
+        ll.append(33);
+        ll.append(43);
+        ll.append(10);
+
+        assertArrayEquals(new Object[]{90, 43, 23, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
+
+        assertEquals(2, ll.getIndexByNodeValue(23));
+
+
     }
 }

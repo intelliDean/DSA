@@ -13,7 +13,11 @@ public class LinkedListMain {
         list.prepend(90);
 
         System.out.println(list.getAll());
-       // System.out.println(list.replaceWith(2, 100));
+        System.out.println(list.getIndexByNodeValue(78));
+        System.out.println(list.getAll());
+
+
+        // System.out.println(list.replaceWith(2, 100));
         //System.out.println(list.getAll());
         //list.insert(100, 4);
        // list.display();
@@ -26,7 +30,7 @@ public class LinkedListMain {
 //        System.out.println(list.getAll());
 
         //System.out.println(list);
-        System.out.println(list.getAll());
+        //System.out.println(list.getAll());
 
     }
 }
