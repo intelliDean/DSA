@@ -1,4 +1,4 @@
-package my_custom_list;
+package my_custom_arraylist;
 
 
 import org.junit.jupiter.api.BeforeEach;

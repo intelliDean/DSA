@@ -28,7 +28,7 @@ class BinarySearchArraysTest {
     }
     @Test
     void nextGreaterLetter() {
-        assertEquals('f', BinarySearchArrays.nextGreatLetter(new char[] {'a', 'c', 'f', 'h','k'}, 'd'));
+        assertEquals('f', BinarySearchArrays.nextGreatLetter(new char[] {'a', 'c', 'f', 'h','k'}, 'e'));
         assertEquals('a', BinarySearchArrays.nextGreatLetter(new char[] {'a', 'c', 'f', 'h','k'}, 'q'));
     }
 

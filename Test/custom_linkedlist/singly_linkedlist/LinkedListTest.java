@@ -1,5 +1,7 @@
 package custom_linkedlist.singly_linkedlist;
 
+import custom_linkedlist.singly.singly_linkedlist.LinkedList;
+import custom_linkedlist.singly.singly_linkedlist.Node;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -210,7 +212,17 @@ class LinkedListTest {
         assertArrayEquals(new Object[]{90, 43, 23, 33, 43, 10}, ll.getAll().toArray(new Object[0]));
 
         assertEquals(2, ll.getIndexByNodeValue(23));
+    }
+    @Test
+    void isContain() {
+        ll.prepend(23);
+        ll.prepend(43);
+        ll.prepend(90);
+        ll.append(33);
+        ll.append(43);
+        ll.append(10);
 
-
+        assertTrue(ll.isContain(33));
+        assertFalse(ll.isContain(100));
     }
 }

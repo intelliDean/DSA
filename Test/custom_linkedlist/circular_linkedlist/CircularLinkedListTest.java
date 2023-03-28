@@ -3,8 +3,7 @@ package custom_linkedlist.circular_linkedlist;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CircularLinkedListTest {
     CircularLinkedList cll;
@@ -148,6 +147,27 @@ class CircularLinkedListTest {
         cll.replaceWith(90, 430);
 
         assertArrayEquals(new Object[]{54, 430, 23, 65}, cll.getAll().toArray(new Object[0]));
+    }
+    @Test
+    void findIndexByValue() {
+        cll.add(54);
+        cll.add(90);
+        cll.add(23);
+        cll.add(65);
+
+        assertEquals(2, cll.findIndex(23));
+
+        assertArrayEquals(new Object[]{54, 90, 23, 65}, cll.getAll().toArray(new Object[0]));
+    }
+    @Test
+    void isContain() {
+        cll.add(54);
+        cll.add(90);
+        cll.add(23);
+        cll.add(65);
+
+        assertTrue(cll.isContain(90));
+        assertFalse(cll.isContain(200));
     }
 
 }

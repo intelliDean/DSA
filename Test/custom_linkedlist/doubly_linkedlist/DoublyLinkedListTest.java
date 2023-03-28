@@ -3,8 +3,7 @@ package custom_linkedlist.doubly_linkedlist;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class DoublyLinkedListTest {
     DoublyLinkedList dll;
@@ -99,8 +98,9 @@ class DoublyLinkedListTest {
         Node node = dll.findByIndex(4);
         assertEquals(67, node.getValue());
     }
+
     @Test
-    void deleteFirst(){
+    void deleteFirst() {
         dll.prepend(23);
         dll.prepend(89);
         dll.prepend(98);
@@ -143,6 +143,7 @@ class DoublyLinkedListTest {
 
         assertArrayEquals(new Object[]{98, 89, 23, 67, 12}, dll.getAll().toArray(new Object[0]));
     }
+
     @Test
     void replaceWith() {
         dll.prepend(23);
@@ -157,4 +158,34 @@ class DoublyLinkedListTest {
 
         assertArrayEquals(new Object[]{98, 89, 70, 89, 67, 12}, dll.getAll().toArray(new Object[0]));
     }
+
+    @Test
+    void findIndexByValue() {
+        dll.prepend(23);
+        dll.prepend(89);
+        dll.prepend(98);
+
+        dll.append(89);
+        dll.append(67);
+        dll.append(12);
+
+
+        assertEquals(2, dll.findIndex(23));     //this is a funny scenario... if you put this before the getAll method, it'll fail
+
+        assertArrayEquals(new Object[]{98, 89, 23, 89, 67, 12}, dll.getAll().toArray(new Object[0]));
+    }
+    @Test
+    void isContains() {
+        dll.prepend(23);
+        dll.prepend(89);
+        dll.prepend(98);
+
+        dll.append(89);
+        dll.append(67);
+        dll.append(12);
+
+        assertTrue(dll.isContain(67));
+        assertFalse(dll.isContain(200));
+    }
+
 }

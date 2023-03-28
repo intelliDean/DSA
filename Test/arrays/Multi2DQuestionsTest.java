@@ -16,5 +16,8 @@ class Multi2DQuestionsTest {
     @Test
     void findMaxRowOfA2DArray() {
         assertEquals(19, Multi2DQuestions.max2DArray(new int[][]{{4,3,5}, {9,8,2},{1,2,3}}));
+    }@Test
+    void findMaxOfARowOfA2DArray() {
+        assertArrayEquals(new int[]{1, 19}, Multi2DQuestions.maxRow(new int[][]{{4,3,5}, {9,8,2},{1,2,3}}));
     }
 }

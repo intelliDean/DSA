@@ -11,7 +11,7 @@ class Binary2DTest {
     }
     @Test
     void binary2D() {
-        assertArrayEquals(new int[]{1, 2}, Binary2D.binary2D(new int[][]{{1,2,3}, {4,5,6}, {7,8,9}}, 6));
+        assertArrayEquals(new int[]{1, 0}, Binary2D.binary2D(new int[][]{{1,2,3}, {4,5,6}, {7,8,9}}, 4));
     }
 
 }

@@ -9,7 +9,8 @@ public class BinarySearchArrays {
             int mid = start + (end - start) / 2;
             if (target > arrays[mid]) {
                 start = mid + 1;
-            } else if (target < arrays[mid]) {
+            } else if
+            (target < arrays[mid]) {
                 end = mid - 1;
             } else {
                 return mid;
@@ -21,7 +22,7 @@ public class BinarySearchArrays {
     public static int orderAgnosticBS(int[] arrays, int target) {
         int start = 0;
         int end = arrays.length - 1;
-        while (start <=end) {
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arrays[mid] == target) {
                 return mid;
@@ -82,7 +83,7 @@ public class BinarySearchArrays {
             int mid = start + (end - start) / 2;
             if (target > chars[mid]) {
                 start = mid + 1;
-            } else  {
+            } else {
                 end = mid - 1;
             }
         }

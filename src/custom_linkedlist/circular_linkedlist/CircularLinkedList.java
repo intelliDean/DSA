@@ -155,4 +155,26 @@ public class CircularLinkedList {
         node.setNext(find.getNext().getNext());
         find.setNext(node);
     }
+
+    public int findIndex(int value) {
+        Node node = head;
+        for (int i = 0; i < size; i++) {
+            if (node.getValue() == value) {
+                return i;
+            }
+            node = node.getNext();
+        }
+        return -1;
+    }
+
+    public boolean isContain(int value) {
+        Node node = head;
+        for (int i = 0; i < size; i++) {
+            if (node.getValue() == value) {
+                return true;
+            }
+            node = node.getNext();
+        }
+        return false;
+    }
 }

@@ -1,4 +1,4 @@
-package custom_linkedlist.singly_linkedlist;
+package custom_linkedlist.singly.singly_linkedlist;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -154,13 +154,13 @@ public class LinkedList {
 
 
     public void replaceWith(int index, int number) {
-        Node node = new Node(number);
         Node find = head;
 
         for (int i = 1; i < index; i++) {
             find = find.getNext();
         }
 
+        Node node = new Node(number);
         node.setNext(find.getNext().getNext());
         find.setNext(node);
     }
@@ -190,5 +190,16 @@ public class LinkedList {
             node = node.getNext();
         }
         return -1;
+    }
+
+    public boolean isContain(int value) {
+        Node node = head;
+        for (int i = 0; i < size; i++) {
+            if (node.getValue() == value) {
+                return true;
+            }
+            node = node.getNext();
+        }
+        return false;
     }
 }

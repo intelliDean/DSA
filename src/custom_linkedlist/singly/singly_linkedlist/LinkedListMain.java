@@ -1,4 +1,4 @@
-package custom_linkedlist.singly_linkedlist;
+package custom_linkedlist.singly.singly_linkedlist;
 
 public class LinkedListMain {
     public static void main(String[] args) {

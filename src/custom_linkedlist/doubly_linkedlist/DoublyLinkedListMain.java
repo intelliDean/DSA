@@ -12,9 +12,11 @@ public class DoublyLinkedListMain {
 
 
         dll.display();
-        dll.delete(2);
-        System.out.println();
-        dll.display();
+
+        System.out.println(dll.findIndex(200));
+//        dll.delete(2);
+//        System.out.println();
+//        dll.display();
 //        dll.prepend(990);
 //        dll.prepend(234);
 //         dll.prepend(20);

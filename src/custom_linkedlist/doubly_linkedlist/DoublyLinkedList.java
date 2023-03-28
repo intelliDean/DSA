@@ -1,6 +1,5 @@
 package custom_linkedlist.doubly_linkedlist;
 
-import javax.imageio.metadata.IIOMetadataFormatImpl;
 import java.util.ArrayList;
 
 public class DoublyLinkedList {
@@ -40,7 +39,7 @@ public class DoublyLinkedList {
         node.setNext(null);
 
         if (tail != null) {
-           tail.setNext(node);
+            tail.setNext(node);
         }
         tail = node;
         size++;
@@ -159,5 +158,29 @@ public class DoublyLinkedList {
         next.setPrevious(node);
         find.setNext(node);
         node.setPrevious(find);
+    }
+
+    public int findIndex(int value) {
+        Node node = head;
+        if (node != null) {
+            for (int j = 0; j < size; j++) {
+                if (node.getValue() == value) {
+                    return j;
+                }
+                node = node.getNext();
+            }
+        }
+        return -1;
+    }
+
+    public boolean isContain(int value) {
+        Node node = head;
+        for (int i = 0; i < size; i++) {
+            if (node.getValue() == value) {
+                return true;
+            }
+            node = node.getNext();
+        }
+        return false;
     }
 }
